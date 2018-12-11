@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- Whenever the image is clicked, it will pass the existing value to the update url -->
+<a href="{{ url_for('update', value=value) }}">>
+  <img src="{{ url_for('static', filename='image/play-button.jpg') }}"  height="128" width="128" />
+</a>
+<br>
+
+<!-- Display the current value -->
+<input type="text" name="fname" value="{{ value }}">
+
+
+<!-- Reset the value by calling the home function with route = '/' -->
+<form action="/" method="post">
+  <button type="submit" value="Reset">Reset</button>
+</form>
+
+
+</body>
+</html>

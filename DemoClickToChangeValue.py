@@ -3,7 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-# Whenever the path  is http://127.0.0.1:5000/, it will pass value=0 in home.html
+# Whenever the path  is http://127.0.0.1:5000/, it will pass value=0 to home.html
 @app.route('/', methods=('GET', 'POST'))
 def home():
     return render_template('home.html', value=0)
